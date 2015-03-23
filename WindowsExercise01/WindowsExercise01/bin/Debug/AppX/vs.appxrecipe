@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ERICSON-PCM</Machine>
+    <WindowsUser>Ericson</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>4427d19c-b13d-4449-8bb5-fedfcf7cf10e</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Ericson\Desktop\AsyncAwaitDojo\AsyncAwaitDojo\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>9AFD73B63538237A5FEA2065C031013E2396552B21F2A893FA700E7B681AABB5</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>4427d19c-b13d-4449-8bb5-fedfcf7cf10e_1.0.0.0_neutral__5e61pf7041fw2</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>4427d19c-b13d-4449-8bb5-fedfcf7cf10e_5e61pf7041fw2!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>4427d19c-b13d-4449-8bb5-fedfcf7cf10e</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=great</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Ericson\Desktop\AsyncAwaitDojo\AsyncAwaitDojo\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-21T18:04:04.427</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Ericson\Desktop\AsyncAwaitDojo\AsyncAwaitDojo\bin\Debug\AwaitableDojo.exe">
+      <PackagePath>AwaitableDojo.exe</PackagePath>
+      <Modified>2015-03-21T18:04:03.835</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ericson\Desktop\AsyncAwaitDojo\AsyncAwaitDojo\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T09:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ericson\Desktop\AsyncAwaitDojo\AsyncAwaitDojo\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T09:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ericson\Desktop\AsyncAwaitDojo\AsyncAwaitDojo\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T09:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ericson\Desktop\AsyncAwaitDojo\AsyncAwaitDojo\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T09:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ericson\Desktop\AsyncAwaitDojo\AsyncAwaitDojo\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-10-09T12:08:29.564</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ericson\Desktop\AsyncAwaitDojo\AsyncAwaitDojo\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-10-10T13:08:53.100</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ericson\Desktop\AsyncAwaitDojo\AsyncAwaitDojo\bin\Debug\AwaitableDojo.xr.xml">
+      <PackagePath>AwaitableDojo.xr.xml</PackagePath>
+      <Modified>2014-10-10T13:25:50.705</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ericson\Desktop\AsyncAwaitDojo\AsyncAwaitDojo\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-03-21T18:04:03.978</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
