@@ -51,12 +51,22 @@ namespace AsyncAwaitDojo
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Get, new Uri(URL));
 
-            /* Asynchronous request :: Locks here until response is ready */
-            var response = await client.SendAsync(request);
+            try
+            {
+                /* Asynchronous request :: Locks here until response is ready */
+                var response = await client.SendAsync(request);
 
-            /* Flush the content to the UI and unlock it */
-            BodyTextBlock.Text = response.Content.ReadAsStringAsync().Result;
-            ReleaseControls();
+                /* Flush the content to the UI and unlock it */
+                BodyTextBlock.Text = response.Content.ReadAsStringAsync().Result;
+            }
+            catch (HttpRequestException e)
+            {
+                BodyTextBlock.Text = String.Format("{0} (HResult: {1})", e.Message, e.HResult);
+            }
+            finally
+            {
+                ReleaseControls();
+            }
         }
         
     }
