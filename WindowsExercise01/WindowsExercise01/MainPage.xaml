@@ -24,7 +24,7 @@
 
                 <TextBlock Text="URL:" FontSize="18" Grid.Column="0" Padding="0,0,20,0" VerticalAlignment="Center" />
                 <TextBox  x:Name="UrlTextBox" Text="http://www.google.com" TextWrapping="Wrap" FontSize="18" Grid.Column="1" VerticalAlignment="Center" />
-                <Button Content="Confirm" FontSize="18" Grid.Column="2" Margin="20,0,0,0" Click="ConfirmButton_Click" />
+                <Button x:Name="Confirm" Content="Confirm" FontSize="18" Grid.Column="2" Margin="20,0,0,0" Click="ConfirmButton_Click" VerticalAlignment="Bottom" />
             </Grid>
 
             <Border BorderBrush="{ StaticResource ApplicationForegroundThemeBrush }" BorderThickness="1" Grid.Row="1" Margin="0,20,0,0">
@@ -34,6 +34,6 @@
             </Border>
         </Grid>
 
-        <ProgressBar x:Name="ProgressBar" Visibility="Collapsed" />
+        <ProgressBar x:Name="ProgressBar" Visibility="Collapsed" IsIndeterminate="True" />
     </Grid>
 </Page>
