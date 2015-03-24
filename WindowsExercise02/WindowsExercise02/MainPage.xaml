@@ -27,11 +27,11 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Grid.Row="0" Text="Magic Number" FontSize="50" HorizontalAlignment="Center" />
-                <Border BorderThickness="3" BorderBrush="White" Grid.Row="1" >
+                <TextBlock Margin="0,0,0,15" Grid.Row="0" Text="Magic Number" FontSize="50" HorizontalAlignment="Center" />
+            <Border Margin="0,0,0,15" BorderThickness="1" BorderBrush="White" Grid.Row="1" >
                     <TextBlock Grid.Row="1" x:Name="MagicNumberBox" FontSize="100" TextAlignment="Center" Text="--" VerticalAlignment="Center"  />
                 </Border>
-                <Button Grid.Row="2" HorizontalAlignment="Stretch" FontSize="30" x:Name="ButtonCreateCancel" Content="Create New" Tapped="ButtonCreateCancel_Tapped" />
+                <Button Grid.Row="2" MinWidth="0"  HorizontalAlignment="Stretch" FontSize="30" x:Name="ButtonCreateCancel" Content="Create New" Tapped="ButtonCreateCancel_Tapped" />
 
             </Grid>
 
