@@ -25,9 +25,15 @@ namespace WindowsExercise03
     public sealed partial class MainPage : Page
     {
 
+        /*
+         * TODO: Probably it's better moving those for a resource file
+         */
         private const string TXT_CREATE_NEW = "Create New";
         private const string TXT_CANCEL = "Cancel";
-        private bool waitingNewNumber = false;
+
+        /* Running task flag */
+        private bool cancelationRequested = false;
+
 
         public MainPage()
         {
@@ -36,32 +42,63 @@ namespace WindowsExercise03
 
         private void ButtonCreateCancel_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            BlockControls();
-            CreateNewMagicNumber();
+            if (cancelationRequested)
+            {
+                RestoreControls();
+                cancelationRequested = false;
+            }
+            else
+            {
+                EnableCancelation();
+                CreateNewMagicNumber();
+            }
         }
 
         private async Task CreateNewMagicNumber()
         {
 
-            waitingNewNumber = true;
+            cancelationRequested = true;
             MagicNumberCreator mnc = new MagicNumberCreator();
-            int newMagicNumber = mnc.CreateMagicNumber();
-            MagicNumberBox.Text = "" + newMagicNumber;
-            ReleaseControls();
+            int newMagicNumber = await RequestMagicNumber();
 
+            /*
+             * This section runs only after the MagicNumber creation
+             * process is finished. In the meanwhile, the 'cancelationRequested'
+             * flag might be changed from the User request (via UI). In this
+             * case the process of showing a new Magic Number is dropped.
+             */
+            if (cancelationRequested)
+            {
+                cancelationRequested = false;
+                MagicNumberBox.Text = newMagicNumber.ToString();
+                RestoreControls();
+            }
+            
         }
 
-        private void BlockControls()
+        /**
+         * This method uses a Task approach to request a new Magic Number
+         * asynchronously, by using await keyword. The caller method does
+         * so as weel, so it waits for a Task<int> which actually comes out
+         * as a plain int.
+         * */
+        private async Task<int> RequestMagicNumber()
         {
+            MagicNumberCreator mnc = new MagicNumberCreator();
+            int newMagicNumber = await Task.Run(() => mnc.CreateMagicNumber());
+            return newMagicNumber;
+        }
+
+        private void EnableCancelation()
+        {
+            cancelationRequested = true;
             ProgressBar.Visibility = Visibility.Visible;
-            ButtonCreateCancel.IsHitTestVisible = false;
             ButtonCreateCancel.Content = TXT_CANCEL;
         }
 
-        private void ReleaseControls()
+        private void RestoreControls()
         {
             ProgressBar.Visibility = Visibility.Collapsed;
-            ButtonCreateCancel.IsHitTestVisible = true;
             ButtonCreateCancel.Content = TXT_CREATE_NEW;
         }
 
